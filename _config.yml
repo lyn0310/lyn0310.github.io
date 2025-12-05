@@ -1,4 +1,34 @@
-theme: jekyll-theme-cayman
-title: "lyn0310님의 블로그"
-author: "lyn0310"
-description: "GitHub Pages 블로그"
+title: "lyn0310 Blog"
+name: "lyn0310"
+description: "개발 기록 블로그"
+url: "https://lyn0310.github.io"
+baseurl: ""
+
+# 테마 설정 (핵심)
+remote_theme: "mmistakes/minimal-mistakes"
+
+# 필수 플러그인
+plugins:
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+paginate: 5
+paginate_path: "/page:num/"
+
+# 네비게이션 메뉴
+nav:
+  - title: "Home"
+    url: /
+  - title: "Categories"
+    url: /categories/
+  - title: "Tags"
+    url: /tags/
+
+# 포스트 설정
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:title/

@@ -63,3 +63,8 @@ defaults:
     values:
       layout: single
       author_profile: true
+
+# Custom sass 설정
+sass:
+  sass_dir: _sass
+  style: compressed

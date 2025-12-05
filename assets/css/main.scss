@@ -4,7 +4,6 @@
 
 @import "minimal-mistakes";
 
-/* 사이드바 프로필 이미지 크기 조정 */
 .sidebar .author__avatar img {
     width: 180px !important;
     height: 180px !important;
@@ -12,7 +11,6 @@
     border-radius: 50% !important;
 }
 
-/* 한 줄 유지 */
 .author__bio {
     white-space: nowrap !important;
 }

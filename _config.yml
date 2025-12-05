@@ -9,7 +9,7 @@ remote_theme: "mmistakes/minimal-mistakes"
 
 # 필수 플러그인
 plugins:
-  # - jekyll-include-cache
+  - jekyll-include-cache
   # - jekyll-paginate
   - jekyll-sitemap
   - jekyll-feed

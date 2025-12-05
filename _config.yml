@@ -26,13 +26,36 @@ nav:
     url: /categories/
   - title: "Tags"
     url: /tags/
-
+  - title: "About"
+    url: /about/
 # 포스트 설정
 collections:
   posts:
     output: true
     permalink: /:categories/:title/
 
-# 포스트 시간 설정
+# 미래 날짜 허용
 future: true
 
+# Author 설정
+author:
+  name: "Yuna Lee (lyn0310)"
+  avatar: "/assets/images/profile.jpg"
+  bio: "개발자 | 블로그에 개발 기록을 남깁니다."
+  location: "Seoul, South Korea"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/lyn0310"
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "rosaleeyuna43@gmail.com"
+
+# 포스트에 기본 설정 적용
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true

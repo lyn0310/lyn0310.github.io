@@ -10,13 +10,13 @@ remote_theme: "mmistakes/minimal-mistakes"
 # 필수 플러그인
 plugins:
   - jekyll-include-cache
-  - jekyll-paginate
+  # - jekyll-paginate
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
 
-paginate: 5
-paginate_path: "/page:num/"
+# paginate: 5
+# paginate_path: "/page:num/"
 
 # 네비게이션 메뉴
 nav:
@@ -32,3 +32,7 @@ collections:
   posts:
     output: true
     permalink: /:categories/:title/
+
+# 포스트 시간 설정
+future: true
+

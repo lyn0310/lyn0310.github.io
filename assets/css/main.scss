@@ -4,13 +4,23 @@
 
 @import "minimal-mistakes";
 
-.sidebar .author__avatar img {
+.sidebar .author__avatar {
     width: 180px !important;
     height: 180px !important;
+    border-radius: 50% !important;  
+    overflow: hidden !important;    
+}
+
+.sidebar .author__avatar img {
+    width: 100% !important;
+    height: 100% !important;
     object-fit: cover !important;
     border-radius: 50% !important;
 }
 
-.author__bio {
+.sidebar .author__bio {
     white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: block !important;
 }

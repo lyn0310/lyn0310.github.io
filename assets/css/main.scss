@@ -1,12 +1,24 @@
----
-# Only the main Sass file needs front matter
----
+--- # Only the main Sass file needs front matter --- @import "minimal-mistakes";
 
-@import "minimal-mistakes";
+/* 프로필 이미지 강제 원형 */
+.sidebar .author__avatar {
+    width: 180px !important;
+    height: 180px !important;
+}
 
 .sidebar .author__avatar img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%;
+    width: 180px !important;
+    height: 180px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+}
+
+/* bio 한 줄 유지 */
+.sidebar .author__bio {
+    white-space: nowrap !important;
+}
+
+/* 사이드바 폭 확대 (bio 줄바꿈 방지용) */
+.sidebar {
+    width: 300px !important;
 }

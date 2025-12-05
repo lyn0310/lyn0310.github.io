@@ -14,6 +14,8 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-remote-theme
+  - jekyll-mermaid
 
 # paginate: 5
 # paginate_path: "/page:num/"
@@ -28,6 +30,7 @@ nav:
     url: /tags/
   - title: "About"
     url: /about/
+
 # 포스트 설정
 collections:
   posts:
@@ -64,7 +67,15 @@ defaults:
       layout: single
       author_profile: true
 
-# Custom sass 설정
+# Mermaid + Sass 설정
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    block:
+      disable: true
+
 sass:
   sass_dir: _sass
   style: compressed

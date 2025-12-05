@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+{%- assign _page = page -%}
+
+<div id="main" role="main">
+    <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+
+        {%- if page.header.overlay_color or page.header.overlay_image or page.header.image -%}
+        {%- include page__hero.html -%}
+        {%- endif -%}
+
+        <div class="page__inner-wrap">
+
+            <header>
+                <h1 class="page__title" itemprop="headline">
+                    {{ page.title | escape }}
+                </h1>
+
+                {%- if page.subtitle -%}
+                <p class="page__subtitle" itemprop="alternativeHeadline">
+                    {{ page.subtitle | escape }}
+                </p>
+                {%- endif -%}
+
+                {% if page.read_time %}
+                <p class="page__reading-time">
+                    <i class="far fa-clock"></i>
+                    {% include read-time.html %}
+                </p>
+                {% endif %}
+            </header>
+
+            <section class="page__content" itemprop="text">
+                {{ content }}
+            </section>
+
+            <footer class="page__meta">
+                {% include page__meta.html %}
+            </footer>
+
+            {% include page__share.html %}
+            {% include page__comments.html %}
+
+        </div>
+
+        {% if page.author_profile %}
+        {% include author-profile.html %}
+        {% endif %}
+
+        {% include page__related.html %}
+
+    </article>
+</div>
+
+<!-- Mermaid Scripts 추가 -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        mermaid.initialize({ startOnLoad: true });
+    });
+</script>

@@ -1,5 +1,10 @@
---- # Only the main Sass file needs front matter --- @import "minimal-mistakes";
+---
+# Only the main Sass file needs front matter
+---
 
+@import "minimal-mistakes";
+
+/* 사이드바 프로필 이미지 크기 조정 */
 .sidebar .author__avatar img {
     width: 180px !important;
     height: 180px !important;

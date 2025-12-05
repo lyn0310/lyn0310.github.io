@@ -1,6 +1,6 @@
 ---
 title: "Docker를 이용한 Spring Boot Backend 배포 가이드"
-date: 2025-12-06
+date: 2025-12-05
 categories: [docker, backend]
 tags: [docker, springboot, jdk21]
 ---

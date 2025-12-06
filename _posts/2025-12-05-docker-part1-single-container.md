@@ -37,8 +37,6 @@ flowchart LR
 
 # 실제 절차
 
----
-
 ## 1. Dockerfile 생성
 
 ### 1-1. Dockerfile 내용

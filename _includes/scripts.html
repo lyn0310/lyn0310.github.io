@@ -1,7 +1,26 @@
-<!-- Mermaid support -->
+<!-- Mermaid.js Load -->
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    mermaid.initialize({ startOnLoad: true });
+
+    /* Minimal Mistakes는 code block을 Rouge가 감싸서 그대로는 Mermaid가 동작 안함
+        따라서 language-mermaid 블록을 div.mermaid 로 교체해줘야 한다
+    */
+    document.querySelectorAll("pre > code.language-mermaid").forEach((codeBlock) => {
+        const parent = codeBlock.parentNode;
+        const container = document.createElement("div");
+
+        container.classList.add("mermaid");
+        container.textContent = codeBlock.textContent;
+
+        parent.replaceWith(container);
+    });
+
+    /* Mermaid 실행 */
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: "loose"
+    });
 });
 </script>

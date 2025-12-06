@@ -4,47 +4,28 @@ description: "개발 기록 블로그"
 url: "https://lyn0310.github.io"
 baseurl: ""
 
-# 테마 설정 (핵심)
 remote_theme: "mmistakes/minimal-mistakes"
 
-# 필수 플러그인
+future: true
+
 plugins:
-  - jekyll-include-cache
+  # - jekyll-include-cache
   # - jekyll-paginate
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-remote-theme
-  - jekyll-mermaid
 
 # paginate: 5
 # paginate_path: "/page:num/"
 
-# 네비게이션 메뉴
-nav:
-  - title: "Home"
-    url: /
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
-  - title: "About"
-    url: /about/
+sass:
+  sass_dir: _sass
+  style: compressed
 
-# 포스트 설정
-collections:
-  posts:
-    output: true
-    permalink: /:categories/:title/
-
-# 미래 날짜 허용
-future: true
-
-# Author 설정
 author:
   name: "Yuna Lee (lyn0310)"
   avatar: "/assets/images/profile.jpg"
-  bio: "개발자 | 블로그에 개발 기록을 남깁니다."
+  bio: "개발 기록 블로그"
   location: "Seoul, South Korea"
   links:
     - label: "GitHub"
@@ -57,8 +38,21 @@ author:
       icon: "fab fa-instagram"
       url: "https://instagram.com/luy._.una"
 
+nav:
+  - title: "Home"
+    url: /
+  - title: "Categories"
+    url: /categories/
+  - title: "Tags"
+    url: /tags/
+  - title: "About"
+    url: /about/
+    
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:title/
 
-# 포스트에 기본 설정 적용
 defaults:
   - scope:
       path: ""
@@ -66,16 +60,3 @@ defaults:
     values:
       layout: single
       author_profile: true
-
-# Mermaid + Sass 설정
-markdown: kramdown
-
-kramdown:
-  input: GFM
-  syntax_highlighter_opts:
-    block:
-      disable: true
-
-sass:
-  sass_dir: _sass
-  style: compressed
